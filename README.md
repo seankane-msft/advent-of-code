@@ -1,7 +1,7 @@
 # advent-of-code
 Source for the Advent of Code 2021
 
-I'm using both Go and Rust, mostly Go first then trying to reimplement in Rust as I try and pick up the language. I'm also going to include notes about improvements. I'm using the bash `time` functionality to time the solutions for my own curiosity.
+I'm using both Go and Rust, most likely trying Rust first to help learn the language. I'm also going to include notes about improvements. I'm using the bash `time` functionality to time the solutions for my own curiosity.
 
 ## Day 1
 | Method | Language | Real | User | Sys |
@@ -15,11 +15,10 @@ Improvements:
 ## Day 2
 | Method | Language | Real | User | Sys |
 | ------ | -------- | ---- | ---- | --- |
-| `go build . && time ./day-2` | Go | - | - | - |
 | `cargo build && time target/debug/day-2-rust.exe` | Rust | 0.051s | 0.000s | 0.031s |
 
 Improvements:
-* I use an `if/else` for choosing which path to go down, I can convert this to a match statement which is more Rust idiomatic (I think)
+* I use an `if/else` for choosing which path to go down, I can convert this to a match statement which is more Rust idiomatic (I think). Implemented, looks cleaner at least.
 
 Notes:
 * Able to reuse a decent amount of Rust code from day 1's exercise. Reading the input, collecting as a vector. The `String` vs `&str` is still confusing to me, but the compiler was helpful in giving good hints that I didn't even have ot reach for SO/Google/etc.

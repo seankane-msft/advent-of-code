@@ -34,12 +34,11 @@ fn part_one(vec: &Vec<String>) -> i32 {
         let split_vec: Vec<&str> = v.split(" ").collect();
         let orientation = split_vec[0];
         let magnitude: i32 = to_int(split_vec[1].to_string());
-        if orientation == "forward" {
-            horizontal += magnitude;
-        } else if orientation == "down" {
-            depth += magnitude;
-        }else if orientation == "up" {
-            depth -= magnitude;
+        match orientation {
+            "forward" => horizontal += magnitude,
+            "down" => depth += magnitude,
+            "up" => depth -= magnitude,
+            _ => println!("Expected forward, down, or up. Got {}", orientation),
         }
     }
     depth * horizontal
@@ -55,13 +54,14 @@ fn part_two(vec: &Vec<String>) -> i32  {
         let split_vec: Vec<&str> = v.split(" ").collect();
         let orientation = split_vec[0];
         let magnitude: i32 = to_int(split_vec[1].to_string());
-        if orientation == "forward" {
-            horizontal += magnitude;
-            depth += aim * magnitude;
-        } else if orientation == "down" {
-            aim += magnitude;
-        }else if orientation == "up" {
-            aim -= magnitude;
+        match orientation {
+            "forward" => {
+                horizontal += magnitude;
+                depth += aim * magnitude;
+            },
+            "down" => aim += magnitude,
+            "up" => aim -= magnitude,
+            _ => println!("Expected forward, down, or up. Got {}", orientation),
         }
     }
     depth * horizontal
