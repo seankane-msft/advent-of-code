@@ -7,6 +7,8 @@ import (
 	"strconv"
 )
 
+const fileName = "input.txt"
+
 func handle(e error) {
 	if e != nil {
 		panic(e)
@@ -24,7 +26,7 @@ func sum(vals []int) int {
 func main() {
 	/* Part One */
 	// First step, read the input file into a []int
-	file, err := os.Open("input.txt")
+	file, err := os.Open(fileName)
 	handle(err)
 	defer file.Close()
 
