@@ -6,10 +6,20 @@ I'm using both Go and Rust, mostly Go first then trying to reimplement in Rust a
 ## Day 1
 | Method | Language | Real | User | Sys |
 | ------ | -------- | ---- | ---- | --- |
-| `time go run .` | Go | 1.061s | 0.016s | 0.031s |
 | `go build . && time ./day-1` | Go | 0.025s | 0.000s | 0.031s |
-| `time cargo run` | Rust | 0.729s | 0.000s | 0.015s |
 | `cargo build && time target/debug/day-1-rust.exe` | Rust | 0.048s | 0.000s | 0.031s |
 
 Improvements:
 * Rust reads the same input file twice, probably easier to read it once and pass the `Vec<int32>` to each program. (Implemented later)
+
+## Day 2
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build . && time ./day-2` | Go | - | - | - |
+| `cargo build && time target/debug/day-2-rust.exe` | Rust | 0.051s | 0.000s | 0.031s |
+
+Improvements:
+* I use an `if/else` for choosing which path to go down, I can convert this to a match statement which is more Rust idiomatic (I think)
+
+Notes:
+* Able to reuse a decent amount of Rust code from day 1's exercise. Reading the input, collecting as a vector. The `String` vs `&str` is still confusing to me, but the compiler was helpful in giving good hints that I didn't even have ot reach for SO/Google/etc.
