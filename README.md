@@ -22,3 +22,16 @@ Improvements:
 
 Notes:
 * Able to reuse a decent amount of Rust code from day 1's exercise. Reading the input, collecting as a vector. The `String` vs `&str` is still confusing to me, but the compiler was helpful in giving good hints that I didn't even have ot reach for SO/Google/etc.
+
+### Day 3
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-3-go.exe` | Rust | 0.068s | 0.000s | 0.062s |
+
+Improvements:
+* There's probably several, I'm copying an entire array twice, I think I could do the first step in parallel but after that it has to be switched out.
+* I can at least make this more modular, but for now I'm keeping as is.
+
+Notes:
+* Started out in Rust, got part 1 but part 2 I couldn't figure out an elegant way to do it in rust vectors. Go slices worked magically here.
+* When I finished there were 51,200 who had completed both, with another 24,136 who had completed part 1.
