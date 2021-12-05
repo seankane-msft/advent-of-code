@@ -26,7 +26,7 @@ Notes:
 ### Day 3
 | Method | Language | Real | User | Sys |
 | ------ | -------- | ---- | ---- | --- |
-| `go build && time ./day-3-go.exe` | Rust | 0.068s | 0.000s | 0.062s |
+| `go build && time ./day-3-go.exe` | Go | 0.068s | 0.000s | 0.062s |
 
 Improvements:
 * There's probably several, I'm copying an entire array twice, I think I could do the first step in parallel but after that it has to be switched out.
@@ -35,3 +35,16 @@ Improvements:
 Notes:
 * Started out in Rust, got part 1 but part 2 I couldn't figure out an elegant way to do it in rust vectors. Go slices worked magically here.
 * When I finished there were 51,200 who had completed both, with another 24,136 who had completed part 1.
+
+### Day 4
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-4-go.exe` | Go | 0.079s | 0.000s | 0.062s |
+
+Improvements:
+* There's probably a better algorithm for checking the bingo boards, or going through and finding at which value each array has succeeded.
+* Overall, I'm pretty happy with the solution I came up with on the first go about. 161 lines, but a lot of nested stuff.
+
+Notes:
+* Did this puzzle on day 5, had an important UC Bearcats football game to go watch.
+* When I finished there were 59090 who had completed both, with another 3672 who had completed part 1.
