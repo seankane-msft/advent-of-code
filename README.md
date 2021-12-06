@@ -61,3 +61,17 @@ Notes:
 * When I finished there were 45582 who had completed both, with another 3183 who had completed part 1.
     * 31% of the completions of the day 1 puzzle for completing both
 * Had all kinds of silly bugs, like using `<` instead of `<=` in a few spots.
+
+### Day 6
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-5-go.exe` | Go | 0.088s | 0.015s | 0.046s |
+
+Improvements:
+* Started out with a struct for LanternFish and simulating each one individually. This works fine for the first part but the second part it would take a lot longer. I cut off the program at two minutes and refactored.
+* Second solution used a map that kept track of how many fish were in each cycle, this was both simpler and much faster.
+
+Notes:
+* When I finished there were 32217 who had completed both, with another 7436 who had completed part 1.
+    * 23% of the completions of the day 1 puzzle for completing both. Day 1 is now at 148644
+* This one felt much easier than the previous two days.
