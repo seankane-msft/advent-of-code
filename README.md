@@ -48,3 +48,16 @@ Improvements:
 Notes:
 * Did this puzzle on day 5, had an important UC Bearcats football game to go watch.
 * When I finished there were 59090 who had completed both, with another 3672 who had completed part 1.
+
+### Day 5
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-5-go.exe` | Go | 0.032s | 0.000s | 0.031s |
+
+Improvements:
+* Some algorithm I'm not even slightly aware of
+
+Notes:
+* When I finished there were 45582 who had completed both, with another 3183 who had completed part 1.
+    * 31% of the completions of the day 1 puzzle for completing both
+* Had all kinds of silly bugs, like using `<` instead of `<=` in a few spots.
