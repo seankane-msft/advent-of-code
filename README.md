@@ -65,7 +65,7 @@ Notes:
 ### Day 6
 | Method | Language | Real | User | Sys |
 | ------ | -------- | ---- | ---- | --- |
-| `go build && time ./day-5-go.exe` | Go | 0.088s | 0.015s | 0.046s |
+| `go build && time ./day-6-go.exe` | Go | 0.088s | 0.015s | 0.046s |
 
 Improvements:
 * Started out with a struct for LanternFish and simulating each one individually. This works fine for the first part but the second part it would take a lot longer. I cut off the program at two minutes and refactored.
@@ -75,3 +75,19 @@ Notes:
 * When I finished there were 32217 who had completed both, with another 7436 who had completed part 1.
     * 23% of the completions of the day 1 puzzle for completing both. Day 1 is now at 148644
 * This one felt much easier than the previous two days.
+
+### Day 7
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-7.exe` | Go | 0.158s | 0.000s | 0.047s |
+| `go build && time ./day-7.exe` | Go (using median) | 0.139s | 0.031s | 0.046s |
+| `go build && time ./day-7.exe` | Go (using median for part 1, and mean for part 2) | 0.097 | 0.000s | 0.031s |
+
+Improvements:
+* First solution can be analytically determined as the median (thanks Reddit), which can be calculated by sorting the positions.
+* The second solution uses the arithmetic mean and checks one number above and below.
+* Second solution used a map that kept track of how much fuel each difference would cost instead of calculating it every time.
+
+Notes:
+* When I finished there were 39833 who had completed both, with another 2601 who had completed part 1.
+    * 25% of the completions of the day 1 puzzle for completing both. Day 1 is now at 154620
