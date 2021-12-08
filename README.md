@@ -91,3 +91,16 @@ Improvements:
 Notes:
 * When I finished there were 39833 who had completed both, with another 2601 who had completed part 1.
     * 25% of the completions of the day 1 puzzle for completing both. Day 1 is now at 154620
+
+### Day 8
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-8.exe` | Go | 0.093s | 0.000s | 0.046s |
+
+Improvements:
+* First solution was pretty easy
+* Second solution was probably the toughest yet. I overcomplicated it a bit, didn't realize all ten digits were guaranteed to be given, didn't think about things like letter frequency but after a few iterations got through my solution pretty easily. Also happy to have it finish in > .1 seconds :)
+
+Notes:
+* When I finished there were 24289 who had completed both, with another 15567 who had completed part 1.
+    * 15% of the completions of the day 1 puzzle for completing both. Day 1 is now at 159425
