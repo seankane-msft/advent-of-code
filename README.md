@@ -104,3 +104,19 @@ Improvements:
 Notes:
 * When I finished there were 24289 who had completed both, with another 15567 who had completed part 1.
     * 15% of the completions of the day 1 puzzle for completing both. Day 1 is now at 159425
+
+### Day 8
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-9.exe` | Go | 0.075s | 0.000s | 0.015s |
+
+Improvements:
+* The second solution sounds like something that can happen recursively which might be faster but no doubt more complex.
+    * Turns out part two can be done with breadth first search (BFS), maintain a count size.
+
+Notes:
+* First solution was pretty easy, however indexing in Go slice of slices is a pain. This is where I wish there were traditional 2-D arrays.
+* Second solution I made an assumption that paid off, I do it O(n**2) time by going through the whole map a couple times. I assume that each basin is lined by heights of 9 (which turned out to be true). The first time I give each low point a #. The second time I give each 9 a -1 value. I'm left with a bunch of points (labeled as zeros) that are not in a basin. I look at each zero and see if any of it's neighbors are assigned a basin, if they are I give that neighbor a basin. I repeat this process until each point is either a basin or a -1 (indicating a barrier), this only happened 9 times which is less than I thought would happen. Then I create a map to figure out how large each basin is. Finally, iterate through the map to find the three largest basins.
+    * The spec says "all other locations will always be part of exactly one basin", so I guess the 9 barrier was a safe assumption.
+* When I finished there were 23249 who had completed both, with another 9989 who had completed part 1.
+    * 14% of the completions of the day 1 puzzle for completing both. Day 1 is now at 162756
