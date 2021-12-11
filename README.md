@@ -105,7 +105,7 @@ Notes:
 * When I finished there were 24289 who had completed both, with another 15567 who had completed part 1.
     * 15% of the completions of the day 1 puzzle for completing both. Day 1 is now at 159425
 
-### Day 8
+### Day 9
 | Method | Language | Real | User | Sys |
 | ------ | -------- | ---- | ---- | --- |
 | `go build && time ./day-9.exe` | Go | 0.075s | 0.000s | 0.015s |
@@ -120,3 +120,31 @@ Notes:
     * The spec says "all other locations will always be part of exactly one basin", so I guess the 9 barrier was a safe assumption.
 * When I finished there were 23249 who had completed both, with another 9989 who had completed part 1.
     * 14% of the completions of the day 1 puzzle for completing both. Day 1 is now at 162756
+
+### Day 10
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-10.exe` | Go | 0.071s | 0.000s | 0.046s |
+
+Improvements:
+* The second solution sounds like something that can happen recursively which might be faster but no doubt more complex.
+    * Turns out part two can be done with breadth first search (BFS), maintain a count size.
+
+Notes:
+* This was almost exactly one of the questions I used when interview practicing so I recognized the solution almost immediately. It's a riff off the [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) leetcode question. All I had to do was add the scoring.
+* Go doesn't have a stack type implementation in the standard library, but this is easy enough with slices.
+* Rough timing, this took ~16 minutes from reading to completing both, the leaderboard gold cap was at 00:08:06 so I didn't really have much of a chance getting a star.
+* When I finished there were 26754 who had completed both, with another 2307 who had completed part 1.
+    * 16% of the completions of the day 1 puzzle for completing both. Day 1 is now at 165712
+
+### Day 11
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-11.exe` | Go | 0.107s | 0.000s | 0.046s |
+
+Improvements:
+* I iterate over the board until the size of the map doesn't change. Instead you can check each square after you increment it.
+
+Notes:
+* When I finished there were 23178 who had completed both, with another 477 who had completed part 1.
+    * 13.8% of the completions of the day 1 puzzle for completing both. Day 1 is now at 168457
