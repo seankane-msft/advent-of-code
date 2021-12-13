@@ -140,7 +140,20 @@ Notes:
 ### Day 11
 | Method | Language | Real | User | Sys |
 | ------ | -------- | ---- | ---- | --- |
-| `go build && time ./day-11.exe` | Go | 0.107s | 0.000s | 0.046s |
+| `go build && time ./day-11.exe` | Go | 1.633s | 0.000s | 0.046s |
+
+Improvements:
+* The conditional on my second can definitely be improved (at least in readability). I do a BFS search and storing possible paths from a given spot might save time.
+
+Notes:
+* When I finished there were 30160 who had completed both, with another 1914 who had completed part 1.
+    * 17.5% of the completions of the day 1 puzzle for completing both. Day 1 is now at 171962
+    * I completed this puzzle at 10:00 PM at night (spent the day at the browns game and watching football)
+
+### Day 12
+| Method | Language | Real | User | Sys |
+| ------ | -------- | ---- | ---- | --- |
+| `go build && time ./day-12.exe` | Go | 0.107s | 0.000s | 0.046s |
 
 Improvements:
 * I iterate over the board until the size of the map doesn't change. Instead you can check each square after you increment it.
